@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="container dashboard">
+    <h2>Welcome to Lost & Found</h2>
+
+    <p class="text-center">
+        Manage lost and found items easily from your dashboard.
+    </p>
+
+    <div class="row mt-4">
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-center p-3">
+                <h5>Total Items</h5>
+                <h3>{{ total_items }}</h3>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-center p-3">
+                <h5>Lost Items</h5>
+                <h3>{{ lost_items }}</h3>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-center p-3">
+                <h5>Found Items</h5>
+                <h3>{{ found_items }}</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="{{ url_for('home_page') }}" class="btn btn-primary">
+            View Lost & Found Items
+        </a>
+
+        <a href="{{ url_for('add_item') }}" class="btn btn-success">
+            Report an Item
+        </a>
+
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">
+            Logout
+        </a>
+    </div>
+</div>
+
+{% endblock %}
