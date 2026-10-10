@@ -8,7 +8,7 @@
     <div class="form-group">
         <label for="email">Email address</label>
         <input type="email" class="form-control" id="email" name="email" required>
-        <small id="emailHelp" class="form-text text-muted">Please use your college email ending in .edu</small>
+        <small id="emailHelp" class="form-text text-muted">Please use your college email address</small>
     </div>
     <div class="form-group">
         <label for="first_name">First Name</label>
@@ -63,12 +63,6 @@
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        // Check if email ends with .edu
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.edu$/;
-        if (!emailPattern.test(email)) {
-            alert("Please enter a valid college email address ending in .edu");
-            return false;
-        }
 
         // Check if password is at least 8 characters long and contains both letters and numbers
         const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
